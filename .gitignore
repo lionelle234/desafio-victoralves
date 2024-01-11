@@ -1,0 +1,4 @@
+node_modules
+README.md
+# Keep environment variables out of version control
+.env
