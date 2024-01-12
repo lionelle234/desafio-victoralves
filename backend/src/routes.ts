@@ -6,6 +6,9 @@ import { DeleteResultController } from "./controllers/DeleteResultController";
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions){
 
+    fastify.get("/", async (request: FastifyRequest, reply: FastifyReply) => {
+        return 
+    })
 
     //Rota para registrar nota em um bimestre
     fastify.post("/result", async (request: FastifyRequest, reply: FastifyReply) => {
