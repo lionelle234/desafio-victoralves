@@ -14,7 +14,7 @@ const start = async() =>{
     await app.register(cors)
     await app.register(routes)
     try{
-        await app.listen({ port: 0 })
+        await app.listen({ port: 10000 })
     }
     catch(err){
         process.exit(1)
