@@ -5,7 +5,7 @@ import { request } from 'http';
 import { hostname } from 'os';
 
 const app = Fastify({ logger: true })
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
 app.setErrorHandler((error, request, reply) => {
     reply.code(400).send({ message: error.message })
