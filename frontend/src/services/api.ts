@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export const api = axios.create({
-    baseURL: "https://desafiomb.onrender.com"
+    baseURL: "http://0.0.0.0:10000/"
 })
