@@ -5,8 +5,7 @@ import { request } from 'http';
 import { hostname } from 'os';
 
 const app = Fastify({ logger: true })
-const PORT = process.env.PORT || 10000;
-const HOST = process.env.HOST || '0.0.0.0';
+const PORT = process.env.PORT || 3000;
 app.setErrorHandler((error, request, reply) => {
     reply.code(400).send({ message: error.message })
 })
@@ -16,7 +15,7 @@ const start = async() =>{
     await app.register(cors)
     await app.register(routes)
     try{
-        await app.listen(PORT, HOST, () => {
+        await app.listen(PORT, () => {
             console.log(`server started on port ${PORT}`);
           });
     }
